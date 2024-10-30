@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Retrofit2Coroutines</string>
+    <string name="hint_dog_breed">Dog Breed</string>
+</resources>
