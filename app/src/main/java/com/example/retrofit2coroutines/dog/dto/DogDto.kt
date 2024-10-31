@@ -1,4 +1,4 @@
-package com.example.retrofit2coroutines.dog
+package com.example.retrofit2coroutines.dog.dto
 
 import com.google.gson.annotations.SerializedName
 

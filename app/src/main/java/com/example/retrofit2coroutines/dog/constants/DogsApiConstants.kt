@@ -1,4 +1,4 @@
-package com.example.retrofit2coroutines.dog
+package com.example.retrofit2coroutines.dog.constants
 
 object DogsApiConstants {
     const val DOGS_BASE_URL = "https://dog.ceo/api/breed/"

@@ -68,6 +68,8 @@ dependencies {
     implementation(libs.retrofit2Gson)
     implementation(libs.androidx.room.coroutines)
     implementation(libs.recyclerview)
+    implementation(libs.glide)
+    implementation(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
