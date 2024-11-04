@@ -15,12 +15,12 @@ import com.example.retrofit2coroutines.network.RetrofitInstance
 class MainActivity : ComponentActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var dogList: List<String> = emptyList()
 
     private val dogAdapter: DogAdapter by lazy {
         DogAdapter()
     }
 
+    //TODO: implement dagger
     private val dogViewModel: DogViewModel by viewModels {
         DogViewModelFactory(DogRepositoryImpl(RetrofitInstance.dogApi))
     }
@@ -33,7 +33,6 @@ class MainActivity : ComponentActivity() {
 
         setUpView()
         setUpObservers()
-        //searchDogByBreed("vizsla")
     }
 
     private fun setUpObservers() {
@@ -54,7 +53,6 @@ class MainActivity : ComponentActivity() {
             }
 
             override fun onQueryTextChange(p0: String?): Boolean {
-                //do nothing
                 return true
             }
 
@@ -67,17 +65,4 @@ class MainActivity : ComponentActivity() {
             layoutManager = LinearLayoutManager(applicationContext)
         }
     }
-    /*
-        private fun searchDogByBreed(breed: String) {
-            CoroutineScope(Dispatchers.IO).launch{
-                val response = RetrofitInstance.dogApi.getDogsByBreeds("$breed/images")
-                if (response.isSuccessful) {
-                    // do something
-                }else{
-                    // handle server response
-                }
-            }
-        }
-
-     */
 }

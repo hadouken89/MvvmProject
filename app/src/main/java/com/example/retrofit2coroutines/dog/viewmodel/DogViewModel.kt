@@ -25,9 +25,6 @@ class DogViewModel(
                     mutableDogList.value = emptyList()
                 }
             }
-
         }
     }
-
-
 }
